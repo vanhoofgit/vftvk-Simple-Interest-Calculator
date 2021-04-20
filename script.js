@@ -9,14 +9,21 @@ function compute()
     var year = new Date().getFullYear() + parseInt(years) 
     var rate = document.getElementById("rate").value;
     var principal = document.getElementById("principal").value;
-    var interest = principal * years * rate / 100
+    if (principal > 0){
+    var interest = principal * years * rate / 100;
     document.getElementById("result").innerHTML='If you deposit '+principal+',\
     <br\>at an interest rate of '+rate+'%' + '\
     <br\>You will receive an interest amount of '+ interest + '\
-    in the year '+year+'\<br\>'      
+    in the year '+year+'\<br\>';
+
+    } else
+    {
+    document.getElementById("result").innerHTML='The amount must be given in and be greater than zero';
+
+
+    }
+
 }
-
-
 function updateRate() 
 {
     /* This function adjust the interest % , according to the movement
