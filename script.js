@@ -22,6 +22,7 @@ function compute()
 
 
     }
+    document.getElementById("principal").focus();
 
 }
 function updateRate() 
