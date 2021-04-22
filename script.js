@@ -11,14 +11,15 @@ function compute()
     var principal = document.getElementById("principal").value;
     if (principal > 0){
     var interest = principal * years * rate / 100;
-    document.getElementById("result").innerHTML='If you deposit '+principal+',\
-    <br\>at an interest rate of '+rate+'%' + '\
-    <br\>You will receive an interest amount of '+ interest + '\
-    in the year '+year+'\<br\>';
+    document.getElementById("result").innerHTML='If you deposit <span class="numberscolor">'+principal+ '</span> \
+    <br\>at an interest rate of <span class="numberscolor">'+rate+' %</span> \
+    <br\>You will receive an interest amount of <span class="numberscolor"> '+ interest + '</span>\
+    <br\>in the year <spans class="numberscolor">'+year+'</span>';
 
     } else
     {
-    document.getElementById("result").innerHTML='The amount must be given in and be greater than zero';
+    
+    alert ("The amount must be a positive amount");
 
 
     }
